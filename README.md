@@ -1,7 +1,7 @@
-# Home Assistant acv-groep component
-Integration for bin/waste collection  by acv-groep
+# Home Assistant waardlanden component
+Integration for bin/waste collection  by WaardLanden
 
-This works in Ede, Renkum, Renswoude, Veenendaal and Wageningen
+Reinigingsdienst Waardlanden is de reinigingsdienst voor de gemeenten Gorinchem, Hardinxveld-Giessendam, Molenlanden en Vijfheerenlanden
 
 Add the following to your sensor yaml and change the postcode and house number to whats applicable to yours.
  ```yaml
@@ -20,3 +20,4 @@ Add the following to your sensor yaml and change the postcode and house number t
 ###### Original Author: @vloris (Floris Kruisselbrink)
 ###### Modification for acv-groep by: Cadster
 ###### Modification for new api address by: aritmeester
+###### Modification for waardlanden by: M11tch
