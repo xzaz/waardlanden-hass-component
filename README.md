@@ -5,7 +5,7 @@ Reinigingsdienst Waardlanden is de reinigingsdienst voor de gemeenten Gorinchem,
 
 Add the following to your sensor yaml and change the postcode and house number to whats applicable to yours.
  ```yaml
- - platform: acv
+ - platform: waardlanden
    postcode: 6861GG
    housenumber: 4
    resources:
