@@ -3,7 +3,7 @@ Sensor component to monitor waste collection by ACV.
 Original Author:  Floris Kruisselbrink <floris+homeassistant@vloris.nl>
 Modification by: Cadster <cadsters@hotmail.com>
 
-This repo works in Ede, Renkum, Renswoude, Veenendaal and Wageningen
+This repo works in ?
 """
 
 import logging
@@ -45,7 +45,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
-    _LOGGER.debug("Setting up ACV API Reader...")
+    _LOGGER.debug("Setting up Waardlanden API Reader...")
 
     postcode = config.get(CONF_POSTCODE)
     housenumber = config.get(CONF_HOUSENUMBER)
@@ -71,10 +71,10 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
 # Settings for ACV:
 DEFAULT_BASEURL = 'https://wasteapi.ximmio.com/api/{}'
-DEFAULT_COMPANYCODE = 'f8e2844a-095e-48f9-9f98-71fceb51d2c3'
+DEFAULT_COMPANYCODE = '942abcf6-3775-400d-ae5d-7380d728b23c'
 DEFAULT_HEADERS = {
     'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36",
-    'Referer': 'https://acv-afvalkalender.nl/'
+    'Referer': 'https://www.waardlanden.nl/particulieren/afvalinzameling/afvalkalender'
 }
 
 
