@@ -1,7 +1,7 @@
 {
-  "domain": "acv",
-  "name": "ACV garbage collection sensor",
-  "documentation": "https://github.com/cadsters/acv-hass-component/blob/master/README.md",
+  "domain": "waardlanden",
+  "name": "waardlanden garbage collection sensor",
+  "documentation": "https://github.com/m11tch/waardlanden-hass-component/blob/master/README.md",
   "dependencies": [],
   "codeowners": ["@Vloris", "@Cadsters", "@aritmeester"],
   "requirements": []
