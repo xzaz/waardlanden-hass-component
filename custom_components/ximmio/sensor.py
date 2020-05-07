@@ -2,7 +2,7 @@
 Sensor component to monitor waste collection by ACV.
 Original Author:  Floris Kruisselbrink <floris+homeassistant@vloris.nl>
 Modification by: Cadster <cadsters@hotmail.com>
-
+Moditication by: xzaz <https://github.com/xzaz>
 This repo works in ?
 """
 
@@ -25,6 +25,7 @@ ATTR_TRASHTYPE = 'trash_type'
 
 CONF_POSTCODE = 'postcode'
 CONF_HOUSENUMBER = 'housenumber'
+CONF_COMPANYCODE = 'adc418da-d19b-11e5-ab30-625662870761'
 
 SENSOR_TYPES = {
     'today': ['Vandaag', 'mdi:recycle'],
@@ -41,6 +42,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
         vol.All(cv.ensure_list, [vol.In(SENSOR_TYPES)]),
     vol.Required(CONF_POSTCODE, default='1111AA'): cv.string,
     vol.Required(CONF_HOUSENUMBER, '1'): cv.string,
+    vol.Required(CONF_COMPANYCODE)
 })
 
 
@@ -49,7 +51,8 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     postcode = config.get(CONF_POSTCODE)
     housenumber = config.get(CONF_HOUSENUMBER)
-    reader = WasteApiReader(postcode, housenumber)
+    companycode = config.get(CONF_COMPANYCODE)
+    reader = WasteApiReader(postcode, housenumber, companycode)
 
     entities = []
 
@@ -71,12 +74,10 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
 # Settings for ACV:
 DEFAULT_BASEURL = 'https://wasteapi.ximmio.com/api/{}'
-DEFAULT_COMPANYCODE = '942abcf6-3775-400d-ae5d-7380d728b23c'
 DEFAULT_HEADERS = {
     'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36",
-    'Referer': 'https://www.waardlanden.nl/particulieren/afvalinzameling/afvalkalender'
+    'Referer': 'https://area-afval.ximmio.com/' # i think this is correct for everyone??
 }
-
 
 class WasteApiException(Exception):
     pass
@@ -93,7 +94,7 @@ WasteSchedule = NamedTuple('WasteSchedule', [('trash_type', str), ('pickup_date'
 
 class WasteApiReader:
 
-    def __init__(self, postcode, housenumber):
+    def __init__(self, postcode, housenumber, companycode):
         self.postcode = postcode
         self.housenumber = housenumber
         self._request_headers = DEFAULT_HEADERS
