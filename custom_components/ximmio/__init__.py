@@ -1,1 +1,1 @@
-"""ACV garbage collection sensor"""
+"""Ximmio garbage collection sensor"""

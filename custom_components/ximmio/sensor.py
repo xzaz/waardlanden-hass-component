@@ -145,9 +145,12 @@ class WasteApiReader:
         data.update(post_data)
 
         response = requests.post(
-            url, headers=self._request_headers, data=data).json()
-        # TODO: error checking, raise WasteApiException('blabla')
-        return response
+            url, headers=self._request_headers, data=data);
+
+        if response.status_code == 200:
+            return response.json()
+        else:
+            _LOGGER.debug(response.json())
 
     def _find_unique_address_id(self):
         data = {
