@@ -42,7 +42,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.All(cv.ensure_list, [vol.In(SENSOR_TYPES)]),
     vol.Required(CONF_POSTCODE, default='1111AA'): cv.string,
     vol.Required(CONF_HOUSENUMBER, '1'): cv.string,
-    vol.Required(CONF_COMPANYCODE, default:''): cv.string
+    vol.Required(CONF_COMPANYCODE, default=''): cv.string
 })
 
 
