@@ -1,8 +1,8 @@
 {
-  "domain": "waardlanden",
-  "name": "waardlanden garbage collection sensor",
-  "documentation": "https://github.com/m11tch/waardlanden-hass-component/blob/master/README.md",
+  "domain": "ximmio",
+  "name": "ximmio garbage collection sensor",
+  "documentation": "https://github.com/xzaz/waardlanden-hass-component",
   "dependencies": [],
-  "codeowners": ["@Vloris", "@Cadsters", "@aritmeester"],
+  "codeowners": ["@Vloris", "@Cadsters", "@aritmeester", "@xzaz"],
   "requirements": []
 }
