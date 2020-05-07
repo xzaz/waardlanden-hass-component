@@ -1,4 +1,4 @@
-# Home Assistant waardlanden component
+# Home Assistant ximmio component
 Integration for bin/waste collection with the ximmio API
 
 Add the following to your sensor yaml and change the postcode, house number and companycode to whats applicable to yours.
