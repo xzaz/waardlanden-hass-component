@@ -47,7 +47,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
-    _LOGGER.debug("Setting up Waardlanden API Reader...")
+    _LOGGER.debug("Setting up ximmio API Reader...")
 
     postcode = config.get(CONF_POSTCODE)
     housenumber = config.get(CONF_HOUSENUMBER)
