@@ -25,7 +25,7 @@ ATTR_TRASHTYPE = 'trash_type'
 
 CONF_POSTCODE = 'postcode'
 CONF_HOUSENUMBER = 'housenumber'
-CONF_COMPANYCODE = 'adc418da-d19b-11e5-ab30-625662870761'
+CONF_COMPANYCODE = 'companycode'
 
 SENSOR_TYPES = {
     'today': ['Vandaag', 'mdi:recycle'],
@@ -98,7 +98,7 @@ class WasteApiReader:
         self.postcode = postcode
         self.housenumber = housenumber
         self._request_headers = DEFAULT_HEADERS
-        self._companycode = DEFAULT_COMPANYCODE
+        self._companycode = companycode
         self._baseurl = DEFAULT_BASEURL
 
         self._schedules = []
