@@ -33,7 +33,7 @@ SENSOR_TYPES = {
     'grey': ['Rest', 'mdi:recycle'],
     'paper': ['Papier', 'mdi:recycle'],
     'green': ['GFT', 'mdi:recycle'],
-    'packages': ['PMD', 'mdi:recycle'],
+    'plastic': ['PMD', 'mdi:recycle'],
     'textile': ['Textiel', 'mdi:recycle']
 }
 
