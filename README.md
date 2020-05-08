@@ -30,6 +30,12 @@ Different municapilities i gathered from the forks and more information on the w
 | Hardinxveld-Giessendam | 942abcf6-3775-400d-ae5d-7380d728b23c | WaardLanden |
 | Molenlanden | 942abcf6-3775-400d-ae5d-7380d728b23c | WaardLanden |
 | Vijfheerenlanden | 942abcf6-3775-400d-ae5d-7380d728b23c | WaardLanden |
+| Ede | f8e2844a-095e-48f9-9f98-71fceb51d2c3 | ACV-Groep |
+| Renkum | f8e2844a-095e-48f9-9f98-71fceb51d2c3 | ACV-Groep |
+| Renswoude | f8e2844a-095e-48f9-9f98-71fceb51d2c3 | ACV-Groep |
+| Veenendaal  | f8e2844a-095e-48f9-9f98-71fceb51d2c3 | ACV-Groep |
+| Wageningen  | f8e2844a-095e-48f9-9f98-71fceb51d2c3 | ACV-Groep |
+
 
 ###### Original Author: @vloris (Floris Kruisselbrink)
 ###### Modification for acv-groep by: Cadster
