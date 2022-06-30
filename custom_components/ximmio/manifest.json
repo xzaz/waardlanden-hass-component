@@ -4,5 +4,6 @@
   "documentation": "https://github.com/xzaz/waardlanden-hass-component",
   "dependencies": [],
   "codeowners": ["@Vloris", "@Cadsters", "@aritmeester", "@xzaz"],
-  "requirements": []
+  "requirements": [],
+  "version": "1.0"
 }
